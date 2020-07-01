@@ -122,7 +122,7 @@ trap _term SIGTERM
 # Set SIGKILL handler
 trap _kill SIGKILL
 
-# Default for ORACLE SID
+# Default for ORACLE SID(SID name changed by #Diptiman Basak)
 if [ "$ORACLE_SID" == "" ]; then
    export ORACLE_SID=VKPCDB
 else
