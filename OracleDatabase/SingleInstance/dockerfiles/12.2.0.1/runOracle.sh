@@ -8,7 +8,6 @@
 # Description: Runs the Oracle Database inside the container
 # 
 # DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
-# Created by Diptiman Basak on 29th June 2020 -- NJ
 
 ########### Move DB files ############
 function moveFiles {
@@ -125,7 +124,7 @@ trap _kill SIGKILL
 
 # Default for ORACLE SID
 if [ "$ORACLE_SID" == "" ]; then
-   export ORACLE_SID=ORCLCDB
+   export ORACLE_SID=VKPCDB
 else
   # Make ORACLE_SID upper case
   # Github issue # 984
@@ -147,7 +146,7 @@ else
 fi;
 
 # Default for ORACLE PDB
-export ORACLE_PDB=${ORACLE_PDB:-ORCLPDB1}
+export ORACLE_PDB=${ORACLE_PDB:-VKPPDB1}
 
 # Make ORACLE_PDB upper case
 # Github issue # 984
